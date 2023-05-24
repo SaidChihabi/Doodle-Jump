@@ -9,6 +9,9 @@ jobs:
         steps:
             - uses: actions/checkout@v2
 
+            - name: Install SFML
+              run: sudo apt-get install libsfml-dev
+              
             - name: Build C++ code
               run: |
                 mkdir build
