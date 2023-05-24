@@ -1,0 +1,17 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+    build:
+        runs-on: ununtu-latest
+
+        steps:
+            - uses: actions/checkout@v2
+
+            - name: Build C++ code
+              run: |
+                mkdir build
+                cd build
+                cmake ..
+                make
