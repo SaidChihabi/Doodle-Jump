@@ -1,0 +1,20 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v2
+
+            - name: Install SFML
+              run: sudo apt-get install libsfml-dev
+              
+            - name: Build C++ code
+              run: |
+                mkdir build
+                cd build
+                cmake ..
+                make
