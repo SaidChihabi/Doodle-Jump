@@ -5,5 +5,5 @@ set(CMAKE_CXX_STANDARD 17)
 
 find_package(SFML 2.5 COMPONENTS graphics audio REQUIRED)
 
-add_executable(Doodle-Jump main.cpp)
+add_executable(Doodle-Jump main.cpp doodle-jump.cpp)
 target_link_libraries(Doodle-Jump sfml-graphics sfml-audio)
